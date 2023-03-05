@@ -1,15 +1,21 @@
 package com.ordermanagementsystem.order;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
-public class OrderDto {
-    private Integer id;
+@Entity
+@Table(name = "orders")
+public class Order {
+    @Id
+    private int id;
     private float value;
     private String currency;
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
-    public void setId(Integer id){
+    public void setId(int id){
         this.id = id;
     }
     public float getValue() {
@@ -25,4 +31,3 @@ public class OrderDto {
         this.currency = currency;
     }
 }
-
