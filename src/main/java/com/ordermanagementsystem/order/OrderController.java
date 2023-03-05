@@ -15,7 +15,7 @@ public class OrderController {
         this.service = service;
     }
 
-    @PostMapping("/order/create")
+    @PostMapping("/order")
     public ResponseEntity<String> CreateOrder(@RequestBody OrderDto orderDto) {
 
         if (service.getOrder(orderDto.getId()).isPresent()){
