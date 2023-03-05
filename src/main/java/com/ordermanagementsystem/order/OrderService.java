@@ -18,7 +18,7 @@ public class OrderService {
 
     }
 
-    public void createOrder(OrderDto orderDto){
+    public void createOrUpdateOrder(OrderDto orderDto){
         Order order = new Order();
         order.setId(orderDto.getId());
         order.setValue(orderDto.getValue());

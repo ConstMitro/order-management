@@ -16,14 +16,14 @@ public class OrderController {
     }
 
     @PostMapping("/order")
-    public ResponseEntity<String> CreateOrder(@RequestBody OrderDto orderDto) {
+    public ResponseEntity<String> createOrUpdateOrder(@RequestBody OrderDto orderDto) {
 
         if (service.getOrder(orderDto.getId()).isPresent()){
-            service.createOrder(orderDto);
+            service.createOrUpdateOrder(orderDto);
             return ResponseEntity.ok(String.format("Your order %s was updated successfully",orderDto.getId()));
         }
         else {
-            service.createOrder(orderDto);
+            service.createOrUpdateOrder(orderDto);
             return ResponseEntity.ok(String.format("Your order %s was created successfully",orderDto.getId()));
         }
 
