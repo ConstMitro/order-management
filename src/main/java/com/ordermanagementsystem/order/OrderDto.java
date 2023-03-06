@@ -5,6 +5,8 @@ public class OrderDto {
     private Integer id;
     private float value;
     private String currency;
+    private String status;
+
 
     public Integer getId() {
         return id;
@@ -18,11 +20,11 @@ public class OrderDto {
     public void setValue(float value){
         this.value = value;
     }
-    public String getCurrency() {
-        return currency;
-    }
+    public String getCurrency() {return currency;}
     public void setCurrency(String currency){
         this.currency = currency;
     }
+    public String getStatus() {return status;}
+    public void setStatus(String status) { this.status = status; }
 }
 

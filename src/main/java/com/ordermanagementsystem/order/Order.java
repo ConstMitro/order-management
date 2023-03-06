@@ -11,10 +11,9 @@ public class Order {
     private int id;
     private float value;
     private String currency;
+    private String status;
 
-    public int getId() {
-        return id;
-    }
+    public int getId() {return id;}
     public void setId(int id){
         this.id = id;
     }
@@ -30,4 +29,6 @@ public class Order {
     public void setCurrency(String currency){
         this.currency = currency;
     }
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
 }
