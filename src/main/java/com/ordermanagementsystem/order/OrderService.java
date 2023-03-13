@@ -25,7 +25,7 @@ public class OrderService {
         order.setCurrency(orderDto.getCurrency());
         order.setStatus(orderDto.getStatus());
         if (!doesOrderExist(orderDto.getId())&&orderDto.getStatus()==null) {
-            order.setStatus("ONGOING");
+            order.setStatus(OrderStatus.ONGOING);
             repository.save(order);
             return"created";
         }
