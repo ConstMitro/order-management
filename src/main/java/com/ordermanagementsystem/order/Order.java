@@ -11,7 +11,7 @@ public class Order {
     private int id;
     private float value;
     private String currency;
-    private String status;
+    private OrderStatus status;
 
     public int getId() {return id;}
     public void setId(int id){
@@ -29,6 +29,6 @@ public class Order {
     public void setCurrency(String currency){
         this.currency = currency;
     }
-    public String getStatus() { return status; }
-    public void setStatus(String status) { this.status = status; }
+    public OrderStatus getStatus() { return status; }
+    public void setStatus(OrderStatus status) { this.status = status; }
 }
